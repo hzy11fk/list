@@ -1,0 +1,335 @@
+proxy-providers:
+  ABC:
+    type: http
+    path: "./proxy_provider/test.yaml"
+    url: https://ths1f9qf.xyz/link/S2X2Xq2p2AtsUVXP?sub=3
+    interval: 86400
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com
+      interval: 2592000
+ 
+
+
+proxies:
+  -
+   name: azure
+   type: trojan
+   server: leoh.japaneast.cloudapp.azure.com
+   port: 443
+   password: bbf9f554-bea3-4c57-933c-0f5417e5d9c9
+   udp: true
+   sni: leoh.japaneast.cloudapp.azure.com
+   skip-cert-verify: false
+   network: ws
+   ws-opts:
+     path: /bbf9f554-bea3-4c57-933c-0f5417e5d9c9
+     headers:
+       Host: leoh.japaneast.cloudapp.azure.com
+  - 
+    name: claw-jp-ss2022
+    server: 47.79.34.112
+    port: 443
+    client-fingerprint: chrome
+    type: ss
+    udp: true
+    cipher: 2022-blake3-aes-256-gcm
+    password: T4UhAXpXwdEy6+Jqti++Blt5CmwMkpm3fjBnI/zO074=
+    plugin: shadow-tls
+    plugin-opts: 
+     password: MVlWnwyr9vEOK8hL
+     host: douyin.com
+     version: 3
+  - 
+    name: claw-acck-ss2022
+    server: 47.76.36.101
+    port: 8443
+    client-fingerprint: chrome
+    type: ss
+    udp: true
+    cipher: 2022-blake3-aes-256-gcm
+    password: 4IdL2xwEtvuAU++L2POLrM682r7GSJiBLUH4vXvRioY=
+    plugin: shadow-tls
+    plugin-opts: 
+     password: EzkzbOI3fAakLM35
+     host: douyin.com
+     version: 3
+  - 
+    name: isif-acck-ss2022
+    server: 46.232.106.251
+    port: 8443
+    client-fingerprint: chrome
+    type: ss
+    udp: true
+    cipher: 2022-blake3-aes-256-gcm
+    password: 4IdL2xwEtvuAU++L2POLrM682r7GSJiBLUH4vXvRioY=
+    plugin: shadow-tls
+    plugin-opts: 
+     password: EzkzbOI3fAakLM35
+     host: douyin.com
+     version: 3
+  - 
+    name: socks
+    type: socks5
+    server: 192.168.50.3
+    port: 1181
+  -
+   {name: ora-us-reality, server: 149.130.212.57, port: 47148, reality-opts: {public-key: lHRxuKmI635wAQEcDddnNmnL_5hKSld5NPrzd-9NeEQ}, client-fingerprint: chrome, type: vless, uuid: b67bfb79-dc47-4889-9622-8db24a77385d, tls: true, flow: xtls-rprx-vision, skip-cert-verify: false, servername: www.sjsu.edu, network: tcp, udp: true}
+
+
+  - {name: claw-acck2-reality2, server: 47.76.36.101, port: 14407, reality-opts: {public-key: 5RrgxL6wfBtCX8idML-fg4g1T_ejD5RoFSly71T1-30}, client-fingerprint: chrome, type: vless, uuid: 14ca8828-9894-4667-b89b-6101792a5fa2, tls: true, flow: xtls-rprx-vision, skip-cert-verify: false, servername: hkust.edu.hk, network: tcp, udp: true}
+  - {name: claw-cnf-reality, server: 47.76.36.101, port: 33792, reality-opts: {public-key: -ctrH4oFIU-FqXKLS3ncQU_s1pHsX0RX46SmPBpsRC4}, client-fingerprint: chrome, type: vless, uuid: 80b49753-7b75-4474-9812-3574b17ab6da, tls: true, flow: xtls-rprx-vision, skip-cert-verify: false, servername: hkust.edu.hk, network: tcp, udp: true}
+  - {name: isif-cnf-reality, server: 46.232.106.251, port: 33793, reality-opts: {public-key: PwgjO8rhmV7Zx4N0UaTVk2ZIuW_YaomMgynbpQ4frQE}, client-fingerprint: chrome, type: vless, uuid: 80b49753-7b75-4474-9812-3574b17ab6da, tls: true, flow: xtls-rprx-vision, skip-cert-verify: false, servername: hkust.edu.hk, network: tcp, udp: true}
+
+  - {name: isif-acck2-reality2, server: 46.232.106.251, port: 14407, reality-opts: {public-key: 5RrgxL6wfBtCX8idML-fg4g1T_ejD5RoFSly71T1-30}, client-fingerprint: chrome, type: vless, uuid: 14ca8828-9894-4667-b89b-6101792a5fa2, tls: true, flow: xtls-rprx-vision, skip-cert-verify: false, servername: hkust.edu.hk, network: tcp, udp: true}
+
+  - {name: claw-sjc-192-reality, server: 47.239.73.199, port: 43192, reality-opts: {public-key: RcvBcrwJIEEo5rwo0AHTFMoUoOnRrAw82yfjDG6PVzM}, client-fingerprint: chrome, type: vless, uuid: 77698c0c-cfb5-4170-b9ee-08a391f804dc, tls: true, flow: xtls-rprx-vision, skip-cert-verify: false, servername: updates.cdn-apple.com, network: tcp, udp: true}
+
+  - {name: sjc-192-reality, server: 192.18.133.176, port: 43192, reality-opts: {public-key: RcvBcrwJIEEo5rwo0AHTFMoUoOnRrAw82yfjDG6PVzM}, client-fingerprint: chrome, type: vless, uuid: 77698c0c-cfb5-4170-b9ee-08a391f804dc, tls: true, flow: xtls-rprx-vision, skip-cert-verify: false, servername: updates.cdn-apple.com, network: tcp, udp: true}
+  - {name: sjc-192-hy2, server: 192.18.133.176, port: 45422,ports: 50000-60000,mport: 50000-60000, client-fingerprint: chrome, type: hysteria2, password: f1b95d76-924d-40fa-a104-41387d6e7f53, auth: f1b95d76-924d-40fa-a104-41387d6e7f53, sni: mirrors.ustc.edu.cn,skip-cert-verify: true, alpn: [h3], udp: true}
+  - {name: sjc-167-reality, server: 47.239.73.199, port: 36328, reality-opts: {public-key: GW6Uh471iuzhNPs2x8o-h1mVLFfe9p7nBChlWhd-mwc}, client-fingerprint: chrome, type: vless, uuid: d9c7ae26-b67b-41fc-aa99-29e3fed0d69f, tls: true, flow: xtls-rprx-vision, skip-cert-verify: false, servername: updates.cdn-apple.com, network: tcp, udp: true}
+  - {name: sjc-167-hy2, server: 167.234.215.86, port: 45422,ports: 50000-60000,mport: 50000-60000, client-fingerprint: chrome, type: hysteria2, password: edaf38d4-5bef-4f13-8279-f80424590b5b, auth: edaf38d4-5bef-4f13-8279-f80424590b5b, sni: mirrors.ustc.edu.cn,skip-cert-verify: true, alpn: [h3], udp: true}
+  - {name: claw-sjc-152-reality, server: 47.76.71.237, port: 42492, reality-opts: {public-key: uG4BmVoAFdbdiB4Kzjrvg_wAhmRhu_oOBf34h2c7YRY}, client-fingerprint: chrome, type: vless, uuid: 8cd0369c-7cd1-4981-a3c0-08c9243ddaf1, tls: true, flow: xtls-rprx-vision, skip-cert-verify: false, servername: updates.cdn-apple.com, network: tcp, udp: true}
+  - {name: sjc-152-reality, server: 152.70.123.201, port: 42492, reality-opts: {public-key: uG4BmVoAFdbdiB4Kzjrvg_wAhmRhu_oOBf34h2c7YRY}, client-fingerprint: chrome, type: vless, uuid: 8cd0369c-7cd1-4981-a3c0-08c9243ddaf1, tls: true, flow: xtls-rprx-vision, skip-cert-verify: false, servername: updates.cdn-apple.com, network: tcp, udp: true}
+  - {name: claw-hk-hy2, server: 47.239.73.199, port: 8290,ports: 50000-60000,mport: 50000-60000, client-fingerprint: chrome, type: hysteria2, password: da687428-3b7f-4d9b-8a15-484c8b087a16, auth: da687428-3b7f-4d9b-8a15-484c8b087a16, skip-cert-verify: true,sni: mirrors.ustc.edu.cn, alpn: [h3], udp: true}
+  - {name: claw-hk-reality, server: 47.76.36.101, port: 40001, reality-opts: {public-key: yXUVg_Vq2uIxZ_5WHlqcXU0HMhteGOVt1z8fUm5ASTw}, client-fingerprint: chrome, type: vless, uuid: 73f2ff37-5aa4-4f92-a9b3-fa1ebd83a23e, tls: true, flow: xtls-rprx-vision, skip-cert-verify: false, servername: hkust.edu.hk, network: tcp, udp: true}
+  - {name: isif-hk-reality, server: 46.232.106.251, port: 24250, reality-opts: {public-key: GUzha_IElazHI_e8QIGSFQe5rjZQVd-3JSYQaEeoxhc}, client-fingerprint: chrome, type: vless, uuid: 841bd3b1-4869-442c-a350-711a5fd40700, tls: true, flow: xtls-rprx-vision, skip-cert-verify: false, servername: hkust.edu.hk, network: tcp, udp: true}
+  - {name: azure-sg-reality, server: 13.76.30.0, port: 54771, reality-opts: {public-key: Psszq-cQBHqaC86SmtofAbZhxqIyE5-ghJVKXbQVZCU}, client-fingerprint: chrome, type: vless, uuid: 87ceb362-e179-412a-a045-883f1cc62f14, tls: true, flow: xtls-rprx-vision, skip-cert-verify: true, servername: updates.cdn-apple.com, network: tcp, udp: true}
+
+  - {name: ora-us-hy2, server: 149.130.212.57, port: 47147,ports: 50000-60000,mport: 50000-60000, client-fingerprint: chrome, type: hysteria2, password: 2a9a49de-375b-4d29-9601-745f63c2e1e1, auth: 2a9a49de-375b-4d29-9601-745f63c2e1e1, sni: mirrors.ustc.edu.cn,skip-cert-verify: true, alpn: [h3], udp: true}
+  - {name: azure-reality, server: leoh.japaneast.cloudapp.azure.com, port: 48845, reality-opts: {public-key: 63SZNVc27mZh0LXvhLhJvOcaGbUCFTIok_Wn8peRkFw}, client-fingerprint: chrome, type: vless, uuid: fd80c232-1857-4af0-8d35-cdc4610963e0, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: false, servername: dl.google.com, network: tcp, udp: true}
+  - {name: gcp_reality, server: 35.212.251.234, port: 45143, reality-opts: {public-key: jZYd3z0X2iPeuCS_4Haa4XwpLfQ8XYTtlfMigT4q_jU}, client-fingerprint: chrome, type: vless, uuid: 0f2d976d-8e71-47f5-a6f3-8ce226fd3b8b, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: false, servername: aws.amazon.com, network: tcp, udp: true}
+
+  - {name: ora_vless, server: telecom.anycast.cf.030419.xyz, port: 8443, client-fingerprint: chrome, type: vless, uuid: 769e618b-b31b-4d6a-c5b2-824ef389b9a3, tls: true, skip-cert-verify: true, servername: xui.970405.xyz, network: ws, ws-opts: {path: /, headers: {Host: xui.970405.xyz}}, udp: true}
+
+  - {name: ora-reality, server: 146.235.247.213, port: 34567, reality-opts: {public-key: fpdtpRe2Fjwdd8bjMuTi5FK6YGZ930qonneN02RucEg}, client-fingerprint: chrome, type: vless, uuid: d8f7fcac-32d1-48ad-86f1-87012f0b111d, tls: true, flow: xtls-rprx-vision, skip-cert-verify: false, servername: dl.google.com, network: tcp, udp: true}
+  
+  - {name: az-us, server: cf.leoh.works, port: 443, client-fingerprint: chrome, type: vless, uuid: 998c34d8-fed2-40cc-9700-8755ca259e12, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /998c34d8-fed2-40cc-9700-8755ca259e12, headers: {Host: us.970405.xyz}}, udp: true}
+  - {name: az-hk, server: cf.leoh.works, port: 443, client-fingerprint: chrome, type: vless, uuid: a75a574f-56fc-4937-b9ef-4a6a71799ac4, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /a75a574f-56fc-4937-b9ef-4a6a71799ac4, headers: {Host: hk.970405.xyz}}, udp: true}
+  - {name: ora-cf, server: vl.970405.xyz, port: 443, client-fingerprint: chrome, type: vless, uuid: 4254f235-c656-4ca8-aedc-e91d6e1b84f0, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /4254f235-c656-4ca8-aedc-e91d6e1b84f0, headers: {Host: vl.970405.xyz}}, udp: true}
+ 
+ 
+
+proxy-groups:
+  - 
+    name: PROXY
+    type: select
+    url: https://cp.cloudflare.com
+    interval: 2592000
+    use:
+       - ABC
+
+
+    proxies:
+      - load-balance
+      - load-balance2
+      - smart
+      - socks
+      - claw-cnf-reality
+      - isif-cnf-reality
+      - claw-acck2-reality2
+      - claw-acck-ss2022
+      - isif-acck-ss2022
+      - claw-jp-ss2022
+      - isif-acck2-reality2
+      - sjc-192-hy2
+      - claw-sjc-192-reality
+      - sjc-192-reality
+      - sjc-167-hy2
+      - sjc-167-reality
+      - claw-sjc-152-reality
+      - sjc-152-reality
+      - ora-us-reality
+      - claw-hk-hy2
+      - claw-hk-reality
+      - isif-hk-reality
+      - ora-us-hy2
+      - azure-sg-reality
+      - az-us
+      - az-hk
+      - azure-reality
+      - gcp_reality
+      - ora_vless
+      - ora-reality
+      - ora-cf
+
+  -
+     name: "load-balance2"
+     type: load-balance
+     proxies:
+     - claw-cnf-reality
+     - isif-cnf-reality
+
+     url: 'https://www.gstatic.com/generate_204'
+     interval: 300
+     strategy: consistent-hashing
+  -
+     name: "load-balance"
+     type: load-balance
+     proxies:
+     - claw-hk-reality
+     - isif-hk-reality
+#     - claw-acck-ss2022
+#     -  isif-acck-ss2022
+     url: 'https://www.gstatic.com/generate_204'
+     interval: 300
+     strategy: consistent-hashing
+  -  
+    name: OpenAi
+    type: select
+    proxies:
+      - azure-reality
+      
+  -      
+    name: smart
+    type: smart
+    policy-priority: "claw-cnf-reality:0.5;isif-cnf-reality:1.5"
+  
+    proxies:
+      - claw-cnf-reality
+      - isif-cnf-reality
+
+
+
+
+
+
+rules:
+
+ - DST-PORT,0-442/444-65535,DIRECT
+ - SRC-PORT,37418,DIRECT
+ - DOMAIN,steamcdn-a.akamaihd.net ,DIRECT
+ - DOMAIN-SUFFIX,cm.steampowered.com ,DIRECT
+ - DOMAIN-SUFFIX,steamserver.net ,DIRECT
+ - IP-CIDR,45.121.184.0/24,DIRECT
+ - IP-CIDR,103.10.124.0/23,DIRECT
+ - IP-CIDR,103.28.54.0/24,DIRECT
+ - IP-CIDR,146.66.152.0/24,DIRECT
+ - IP-CIDR,146.66.155.0/24,DIRECT
+ - IP-CIDR,153.254.86.0/24,DIRECT
+ - IP-CIDR,155.133.224.0/22,DIRECT
+ - IP-CIDR,155.133.230.0/24,DIRECT
+ - IP-CIDR,155.133.232.0/23,DIRECT
+ - IP-CIDR,155.133.234.0/24,DIRECT
+ - IP-CIDR,155.133.236.0/22,DIRECT
+ - IP-CIDR,155.133.240.0/23,DIRECT
+ - IP-CIDR,155.133.244.0/23,DIRECT
+ - IP-CIDR,155.133.246.0/24,DIRECT
+ - IP-CIDR,155.133.248.0/21,DIRECT
+ - IP-CIDR,162.254.192.0/21,DIRECT
+ - IP-CIDR,185.25.182.0/23,DIRECT
+ - IP-CIDR,190.217.32.0/22,DIRECT
+ - IP-CIDR,192.69.96.0/22,DIRECT
+ - IP-CIDR,205.196.6.0/24,DIRECT
+ - IP-CIDR,208.64.200.0/22,DIRECT
+ - IP-CIDR,208.78.164.0/22,DIRECT
+ - IP-CIDR,205.185.194.0/24,DIRECT
+# - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,DIRECT
+ #- DOMAIN-SUFFIX,steam-chat.com,PROXY
+ #- DOMAIN-SUFFIX,steamcommunity.com,PROXY
+ #- DOMAIN-SUFFIX,steamdb.info,PROXY
+ #- DOMAIN-SUFFIX,steampowered.com,PROXY
+ #- DOMAIN-SUFFIX,steamstatic.com,DIRECT
+ #- DOMAIN-SUFFIX,steamserver.net,DIRECT
+# - DOMAIN-SUFFIX,steambroadcast.akamaized.net,DIRECT
+# - DOMAIN-SUFFIX,steamcdn-a.akamaihd.net,DIRECT
+# - DOMAIN-SUFFIX,steamcommunity-a.akamaihd.net,DIRECT
+# - DOMAIN-SUFFIX,steampipe.akamaized.net,DIRECT
+# - DOMAIN-SUFFIX,steamstore-a.akamaihd.net,DIRECT
+# - DOMAIN-SUFFIX,steamusercontent-a.akamaihd.net,DIRECT
+# - DOMAIN-SUFFIX,steamuserimages-a.akamaihd.net,DIRECT
+ - DOMAIN-SUFFIX,fanatical.com,DIRECT
+ - DOMAIN-SUFFIX,humblebundle.com,DIRECT
+ - DOMAIN-SUFFIX,playartifact.com,DIRECT
+# - DOMAIN-SUFFIX,steam-chat.com,DIRECT
+# - DOMAIN-SUFFIX,steamgames.com,DIRECT
+ #- DOMAIN-SUFFIX,steampowered.com,DIRECT
+ #- DOMAIN-SUFFIX,steamserver.net,DIRECT
+ #- DOMAIN-SUFFIX,steamstat.us,DIRECT
+ #- DOMAIN-SUFFIX,steamstatic.com,DIRECT
+ #- DOMAIN-SUFFIX,underlords.com,DIRECT
+ #- DOMAIN-SUFFIX,valvesoftware.com,DIRECT
+ #- DOMAIN-SUFFIX,xn--ngstr-lra8j.com,DIRECT
+ #- DOMAIN-SUFFIX,steamcontent.com,DIRECT
+ #- DOMAIN-SUFFIX,dl.steam.clngaa.com,DIRECT
+ #- DOMAIN-SUFFIX,dl.steam.ksyna.com,DIRECT
+ #- DOMAIN-SUFFIX,st.dl.bscstorage.net,DIRECT
+ #- DOMAIN-SUFFIX,st.dl.eccdnx.com,DIRECT
+ #- DOMAIN-SUFFIX,st.dl.pinyuncloud.com,DIRECT
+ #- DOMAIN-SUFFIX,cdn.mileweb.cs.steampowered.com.8686c.com,DIRECT
+ #- DOMAIN-SUFFIX,cdn-ws.content.steamchina.com,DIRECT
+ #- DOMAIN-SUFFIX,cdn-qc.content.steamchina.com,DIRECT
+ #- DOMAIN-SUFFIX,cdn-ali.content.steamchina.com,DIRECT
+ - DOMAIN-SUFFIX,ios.gc.com.cn,DIRECT
+ - DOMAIN-KEYWORD,carpt,DIRECT
+ - DOMAIN-SUFFIX,cyanbug.net,DIRECT
+ - DOMAIN-SUFFIX,hdtime.org,DIRECT
+ - DOMAIN-SUFFIX,hddolby.com,DIRECT
+ - DOMAIN-KEYWORD,leohexaz,DIRECT
+ - DOMAIN-KEYWORD,bing,PROXY
+ - DOMAIN-KEYWORD,nodeseek,PROXY
+ - DOMAIN-KEYWORD,itunes,DIRECT
+ - DOMAIN-KEYWORD,redotpay,azure-reality
+# - DOMAIN-SUFFIX,storage.live.com,DIRECT
+# - DOMAIN-SUFFIX,my.microsoftpersonalcontent.com,DIRECT
+ - DOMAIN-KEYWORD,juequling,DIRECT
+ - DOMAIN-KEYWORD,moe123,PROXY
+#- DOMAIN-KEYWORD,sharepoint,DIRECT
+ - DOMAIN-SUFFIX,argotunnel.com,DIRECT
+# - DOMAIN-KEYWORD,myip,DIRECT
+# - DOMAIN-KEYWORD,970217,DIRECT
+ - GEOSITE,apple-cn,DIRECT
+ 
+# - DOMAIN-SUFFIX,courier.push.apple.com,PROXY
+ 
+ 
+
+ - DOMAIN-KEYWORD,openai,OpenAi
+ - DOMAIN,browser-intake-datadoghq.com,OpenAi
+ - DOMAIN,challenges.cloudflare.com,OpenAi
+ - DOMAIN,static.cloudflareinsights.com,OpenAi
+ - DOMAIN,chat.openai.com.cdn.cloudflare.net,OpenAi
+ - DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net,OpenAi
+ - DOMAIN,openaicomproductionae4b.blob.core.windows.net,OpenAi
+ - DOMAIN,production-openaicom-storage.azureedge.net ,OpenAi
+ - DOMAIN,openaiapi-site.azureedge.net,OpenAi
+ - DOMAIN-SUFFIX,ai.com,OpenAi
+ - DOMAIN,openaicom.imgix.net,OpenAi
+ - DOMAIN-SUFFIX,algolia.net,OpenAi
+ - DOMAIN-SUFFIX,api.statsig.com,OpenAi
+ - DOMAIN-SUFFIX,auth0.com,OpenAi
+ - DOMAIN-SUFFIX,chatgpt.com,OpenAi
+ - DOMAIN-SUFFIX,chatgpt.livekit.cloud,OpenAi
+ - DOMAIN-SUFFIX,client-api.arkoselabs.com,OpenAi
+ - DOMAIN-SUFFIX,events.statsigapi.net,OpenAi
+ - DOMAIN-SUFFIX,featuregates.org,OpenAi
+ - DOMAIN-SUFFIX,host.livekit.cloud,OpenAi
+ - DOMAIN-SUFFIX,identrust.com,OpenAi
+ - DOMAIN-SUFFIX,intercom.io,OpenAi
+ - DOMAIN-SUFFIX,intercomcdn.com,OpenAi
+ - DOMAIN-SUFFIX,launchdarkly.com,OpenAi
+ - DOMAIN-SUFFIX,oaistatic.com,OpenAi
+ - DOMAIN-SUFFIX,oaiusercontent.com,OpenAi
+ - DOMAIN-SUFFIX,observeit.net,OpenAi
+ - DOMAIN-SUFFIX,segment.io,OpenAi
+ - DOMAIN-SUFFIX,sentry.io,OpenAi
+ - DOMAIN-SUFFIX,stripe.com,OpenAi
+ - DOMAIN-SUFFIX,turn.livekit.cloud,OpenAi
+ - DOMAIN-KEYWORD,openai,OpenAi
+ - IP-CIDR,24.199.123.28/32,OpenAi,no-resolve
+ - IP-CIDR,64.23.132.171/32,OpenAi,no-resolve
+
+ 
+ 
+ 
+ 
+ 
+
+# - GEOSITE,category-ads-all,REJECT
+# - DST-PORT,0-442/444-65535,DIRECT
+# - GEOIP,private,DIRECT,no-resolve
+# - GEOSITE,private,DIRECT
+# - GEOSITE,geolocation-!cn,PROXY
+ - GEOSITE,cn,DIRECT
+ - GEOIP,cn,DIRECT,no-resolve
+ - MATCH,PROXY
