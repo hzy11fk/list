@@ -316,6 +316,7 @@ rules:
  - DOMAIN-SUFFIX,stripe.com,OpenAi
  - DOMAIN-SUFFIX,turn.livekit.cloud,OpenAi
  - DOMAIN-KEYWORD,openai,OpenAi
+ - DOMAIN-KEYWORD,gemini,OpenAi
  - IP-CIDR,24.199.123.28/32,OpenAi,no-resolve
  - IP-CIDR,64.23.132.171/32,OpenAi,no-resolve
 
